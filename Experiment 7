@@ -1,0 +1,28 @@
+#experiment 7
+#input the sample mean
+xbar=14.6
+xbar
+#input the population mean
+mu0=15.4
+mu0
+#input the standard deviation
+sigma =2.5
+sigma
+#input the sample size
+n=35
+n
+#test statistics
+z=(xbar-mu0)/(sigma/(sqrt(n)))
+z
+#level of significance
+alpha = 0.05
+alpha
+#two tailed critical value
+zhalfalpha = qnorm(1-(alpha/2))
+zhalfalpha
+c(-zhalfalpha,zhalfalpha)
+#to find p-value
+pval = 2 * pnorm(z)
+pval
+#conclusion
+if(pval>alpha){print("Do not reject null hypothesis")}else{print("Rject null hnypothesis")}
