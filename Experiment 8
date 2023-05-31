@@ -1,0 +1,70 @@
+> #Problem 1 - In a random sample of size 500, the mean is found to be 20. in another indep sample of size 400 the mean is 15. Could the samples have been drawn from the same population with s.d 4?
+> #Sample Mean
+> xbar = 20
+> xbar
+[1] 20
+> ybar = 15
+> ybar
+[1] 15
+> #Standard Deviation
+> sigma = 4
+> sigma
+[1] 4
+> #Sample size
+> n1 = 500
+> n1
+[1] 500
+> n2 = 400
+> n2
+[1] 400
+> #Test statistics
+> z = (xbar-ybar)/(sigma*sqrt((1/n1)+(1/n2)))
+> z
+[1] 18.6339
+> #level of significance
+> alpha = 0.05
+> alpha
+[1] 0.05
+> #Two tailed critical value
+> zalpha = qnorm (1-(alpha/2))
+> zalpha
+[1] 1.959964
+> #Conclusion
+> if (z<=zalpha){print("Do not reject Null Hypothesis")} else{print("Accept Null Hypothesis")}
+[1] "Accept Null Hypothesis"
+
+> #In a large city A, 20% of a random sample of 900 schools boys had a sligth physical defect. In another large city B, 18.5% FO A RANDOM SAMPLE OF 1600 SCHOOLS BOYS HAD THE SAMPE DEFECT . IS THE DIFFERENCE BETWEEN PROPORTIONS SIGIFICAM=TN
+> #Sample Proportions
+> p1 = 0.2
+> p2 = 0.185
+> p1
+[1] 0.2
+> p2
+[1] 0.185
+> #Sample size
+> n1=900
+> n2=1600
+> n1
+[1] 900
+> n2
+[1] 1600
+> #To find approx. poulation proportion
+> P = (n1*p1 + n2*p2)/(n1+n2)
+> P
+[1] 0.1904
+> Q = 1-P
+> #Test Staistics
+> z = (p1-p2)/sqrt(P*Q*((1/n1)+(1/n2)))
+> z
+[1] 0.9169249
+> #Level of Significance
+> alpha = 0.05
+> alpha
+[1] 0.05
+> #Two Tailed Critical Value
+> zalpha = qnorm(1-(alpha/2))
+> zalpha
+[1] 1.959964
+> #Conclusion
+> if (z<=zalpha){print("Do not reject Null Hypothesis")} else{print("Accept Null Hypothesis")}
+[1] "Do not reject Null Hypothesis"
