@@ -1,3 +1,4 @@
+# Testing of hypothesis two sample mean
 > #Problem 1 - In a random sample of size 500, the mean is found to be 20. in another indep sample of size 400 the mean is 15. Could the samples have been drawn from the same population with s.d 4?
 > #Sample Mean
 > xbar = 20
